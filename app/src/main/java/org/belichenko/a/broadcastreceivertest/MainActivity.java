@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.wifi.WifiManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
@@ -45,9 +44,9 @@ public class MainActivity extends AppCompatActivity implements MyConstants {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Send WIFI STATE CHANGED", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Update receivers status", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                sendMessage();
+                checkReceiversState();
             }
         });
         checkReceiversState();
