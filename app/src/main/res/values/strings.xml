@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Receivers state checker</string>
+    <string name="action_settings">Settings</string>
+    <string name="more">Touch to see more</string>
+    <string name="bl_on">Bluetoot ON</string>
+    <string name="bl_off">Bluetooth OFF</string>
+    <string name="wf_off">WiFi OFF</string>
+    <string name="wf_on">WiFi ON</string>
+    <string name="air_on">Air mode ON</string>
+    <string name="air_off">Air mode OFF</string>
+    <string name="air_text">Airplane state</string>
+    <string name="wifi_text">WiFi state</string>
+    <string name="bt_text">Bluetooth state</string>
+</resources>
