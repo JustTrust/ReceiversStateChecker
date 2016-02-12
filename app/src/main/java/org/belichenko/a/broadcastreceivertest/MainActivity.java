@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements MyConstants {
 
     @OnClick(R.id.wifi_switch)
     public void clickOnWifi(View view) {
-        WifiManager wManager = (WifiManager)this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+        WifiManager wManager = (WifiManager) this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         wManager.setWifiEnabled(wifi_switch.isChecked());
     }
 
@@ -140,11 +140,11 @@ public class MainActivity extends AppCompatActivity implements MyConstants {
     }
 
     @OnClick(R.id.bt_switch)
-    public void clickOnBT(){
+    public void clickOnBT() {
         BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bt_switch.isChecked()) {
             mBluetoothAdapter.enable();
-        }else {
+        } else {
             mBluetoothAdapter.disable();
         }
     }
@@ -167,8 +167,8 @@ public class MainActivity extends AppCompatActivity implements MyConstants {
             new BroadcastReceiver() {
                 @Override
                 public void onReceive(Context context, Intent intent) {
-                    Log.d(LOG_TAG, "onReceive() called with: " + " intent = [" + intent + "]");
+                    Log.d(LOG_TAG, "onReceive() called with local intent = [" + intent + "]");
+                    checkReceiversState();
                 }
-
             };
 }

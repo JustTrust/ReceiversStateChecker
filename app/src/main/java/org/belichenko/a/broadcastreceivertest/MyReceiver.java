@@ -22,11 +22,10 @@ import butterknife.OnClick;
  */
 public class MyReceiver extends BroadcastReceiver implements MyConstants {
 
-    SharedPreferences mPrefs;
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        mPrefs = context.getSharedPreferences(MAIN_PREFERENCE, Context.MODE_PRIVATE);
+
         Log.d(LOG_TAG, "onReceive() called with: " + " intent = [" + intent.getAction() + "]");
         switch (intent.getAction()) {
 
